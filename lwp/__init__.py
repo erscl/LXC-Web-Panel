@@ -70,7 +70,7 @@ cgroup['allow'] = 'lxc.cgroup.devices.allow'
 
 
 def FakeSection(fp):
-    content = u"[DEFAULT]\n%s" % unicode(fp.read(), default_encoding, 'ignore')
+    content = u"[DEFAULT]\n%s" % unicode(fp.read(), 'utf-8', 'ignore')
 
     return StringIO(content)
 
